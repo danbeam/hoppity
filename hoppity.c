@@ -7,7 +7,7 @@ int main (int argc, char *argv[]) {
 
     if (argc <= 1) {
         fprintf(stderr, "You need to specify a filename!\n");
-        fprintf(stderr, "USAGE: %s <filename>\n", argv[0]);
+        fprintf(stderr, "Usage: %s <filename>\n", argv[0]);
         return 1;
     }
 
@@ -31,7 +31,7 @@ int main (int argc, char *argv[]) {
         fgets(buffer, 100, in_file);
         to_count = atoi(buffer);
     }
-    while (!feof(in_file) && to_count < 0);
+    while (!feof(in_file) && to_count <= 0);
     
     fclose(in_file);
    

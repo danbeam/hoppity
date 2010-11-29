@@ -1,4 +1,5 @@
 use strict;
+use Data::Dumper;
 
 my $DEBUG = (1 != 1);
 
@@ -17,16 +18,17 @@ unless (-r $ARGV[0]) {
     exit 1;
 }
 
-my $to_count;
 print "Trying to open $ARGV[0]\n" if $DEBUG;
 
+my $to_count;
+open FILE, $ARGV[0];
+
 {
-    local $\ = undef;
-    open FILE, $ARGV[0];
+    undef $/;
     $to_count = <FILE>;
 }
 
-chomp $to_count;
+$to_count =~ s/\D//g;
 print "Got value of $to_count from file.\n" if $DEBUG;
 
 for (my $i = 1; $i <= $to_count; ++$i) {

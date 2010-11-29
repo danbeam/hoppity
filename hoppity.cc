@@ -2,13 +2,13 @@
 #include <sstream>
 #include <fstream>
 
-#define DEBUG
+//#define DEBUG
 
 int main (int argc, char *argv[]) {
 
     if (argc <= 1) {
         std::cerr << "You need to specify a filename!" << std::endl
-                  << "USAGE: " << argv[0] << " <filename>" << std::endl;
+                  << "Usage: " << argv[0] << " <filename>" << std::endl;
         return 1;
     }
 

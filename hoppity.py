@@ -19,13 +19,13 @@ elif not os.access(sys.argv[1], os.R_OK):
     sys.exit(1)
 
 in_file = open(sys.argv[1], 'r')
-to_count = in_file.readline().strip()
+to_count = in_file.read().strip()
 in_file.close()
 
 if debug:
     print "Got value of " + to_count + " from file"
 
-to_count = int(to_count)
+to_count = int(to_count, 10)
 
 for i in range(1, to_count + 1):
     if 0 == i % 15:
