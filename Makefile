@@ -11,8 +11,8 @@ JAVA=java
 PHP=php
 PERL=perl
 PY=python
-SH=sh
 RUBY=ruby
+SH=sh
 
 # delete command for clean target
 DEL=rm -f
@@ -40,8 +40,8 @@ run:
 	$(PHP) hoppity.php $(FILE)
 	$(PERL) hoppity.pl $(FILE)
 	$(PY) hoppity.py $(FILE)
-	$(SH) hoppity.sh $(FILE)
 	$(RUBY) hoppity.rb $(FILE)
+	$(SH) hoppity.sh $(FILE)
 
 # check when no arguments are passed
 no_arg:
@@ -51,8 +51,8 @@ no_arg:
 	$(PHP) hoppity.php
 	$(PERL) hoppity.pl
 	$(PY) hoppity.py
-	$(SH) hoppity.sh
 	$(RUBY) hoppity.rb
+	$(SH) hoppity.sh
 
 # check when the file doesn't exist
 no_file:
@@ -62,8 +62,8 @@ no_file:
 	$(PHP) hoppity.php $(NO_FILE)
 	$(PERL) hoppity.pl $(NO_FILE)
 	$(PY) hoppity.py $(NO_FILE)
-	$(SH) hoppity.sh $(NO_FILE)
 	$(RUBY) hoppity.rb $(NO_FILE)
+	$(SH) hoppity.sh $(NO_FILE)
 
 # check when the file's no readable
 no_read:
@@ -73,8 +73,8 @@ no_read:
 	$(PHP) hoppity.php $(NO_READ)
 	$(PERL) hoppity.pl $(NO_READ)
 	$(PY) hoppity.py $(NO_READ)
-	$(SH) hoppity.sh $(NO_READ)
 	$(RUBY) hoppity.rb $(NO_READ)
+	$(SH) hoppity.sh $(NO_READ)
 
 # remove any compiled files
 clean:
