@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <libgen.h>
 
 //#define DEBUG
 
@@ -7,7 +7,7 @@ int main (int argc, char *argv[]) {
 
     if (argc <= 1) {
         fprintf(stderr, "You need to specify a filename!\n");
-        fprintf(stderr, "Usage: %s <filename>\n", argv[0]);
+        fprintf(stderr, "Usage: %s <filename>\n", basename(argv[0]));
         return 1;
     }
 

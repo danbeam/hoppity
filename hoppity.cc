@@ -1,6 +1,7 @@
 #include <iostream>
 #include <sstream>
 #include <fstream>
+#include <libgen.h>
 
 //#define DEBUG
 
@@ -8,7 +9,7 @@ int main (int argc, char *argv[]) {
 
     if (argc <= 1) {
         std::cerr << "You need to specify a filename!" << std::endl
-                  << "Usage: " << argv[0] << " <filename>" << std::endl;
+                  << "Usage: " << basename(argv[0]) << " <filename>" << std::endl;
         return 1;
     }
 
