@@ -69,7 +69,7 @@ run: hoppity.c.o hoppity.cc.o hoppity.class
 	@$(SH) hoppity.sh $(FILE)
 
 # check when no arguments are passed
-no_arg:
+no_arg: hoppity.c.o hoppity.cc.o hoppity.class
 	@./hoppity.c.o
 	@./hoppity.cc.o
 	@$(JAVA) hoppity
@@ -80,7 +80,7 @@ no_arg:
 	@$(SH) hoppity.sh
 
 # check when the file doesn't exist
-no_file:
+no_file: hoppity.c.o hoppity.cc.o hoppity.class
 	@./hoppity.c.o $(NO_FILE)
 	@./hoppity.cc.o $(NO_FILE)
 	@$(JAVA) hoppity $(NO_FILE)
@@ -91,7 +91,7 @@ no_file:
 	@$(SH) hoppity.sh $(NO_FILE)
 
 # check when the file's no readable
-no_read: $(NO_READ)
+no_read: hoppity.c.o hoppity.cc.o hoppity.class $(NO_READ)
 	@./hoppity.c.o $(NO_READ)
 	@./hoppity.cc.o $(NO_READ)
 	@$(JAVA) hoppity $(NO_READ)
