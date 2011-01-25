@@ -7,7 +7,7 @@
 define('DEBUG', false);
 
 if (!isset($argv[1])) {
-    @file_put_contents('php://stderr', "You need to specify a file name!\n" . "Usage: " . basename($_SERVER['PHP_SELF']) . " <filename>\n", FILE_APPEND);
+    @file_put_contents('php://stderr', "You need to specify a filename!\n" . "Usage: " . basename($_SERVER['PHP_SELF']) . " <filename>\n", FILE_APPEND);
     exit(1);
 }
 

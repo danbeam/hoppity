@@ -11,7 +11,7 @@ class hoppity {
 
         if (args.length <= 0) {
             System.err.println("You need to specify a filename!");
-            System.err.println("Usage: java hoppity <filename>");
+            System.err.println("Usage: hoppity <filename>");
             System.exit(1);
         }
 

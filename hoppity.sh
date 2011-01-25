@@ -1,3 +1,5 @@
+#!/bin/sh
+
 if [ $# -le 0 ]; then
     cat <<EOT
 You need to specify a filename!

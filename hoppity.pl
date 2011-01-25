@@ -1,10 +1,11 @@
+
 use strict;
-use Data::Dumper;
+use warnings;
 
 my $DEBUG = (1 != 1);
 
 if ($#ARGV < 0) {
-    print STDERR "You need to specify a file name!\n" .
+    print STDERR "You need to specify a filename!\n" .
                  "Usage: $0 <filename>\n";
     exit 1;
 }
