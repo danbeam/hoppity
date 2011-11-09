@@ -106,3 +106,8 @@ clean:
 	@$(DEL) hoppity.c.o
 	@$(DEL) hoppity.cc.o
 	@$(DEL) hoppity.class
+
+# none of these require files
+.PHONY : clean
+.PHONY : deps
+.PHONY : make_unreadable
